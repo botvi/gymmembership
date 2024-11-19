@@ -340,11 +340,16 @@
 					</div>
 					<div class="user-box dropdown">
 						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" class="user-img" alt="user avatar">
+							<img src="https://st4.depositphotos.com/3265223/24936/v/450/depositphotos_249366040-stock-illustration-fitness-gym-logo-with-strong.jpg" class="user-img" alt="user avatar">
 						
 							<div class="user-info ps-3">
+								@auth
+									<p class="user-name mb-0">{{ Auth::user()->nama }}</p>
+									<p class="designation mb-0">{{ '@' . Auth::user()->username }}</p>
+								@else
 									<p class="user-name mb-0">Guest</p>
 									<p class="designation mb-0">Not Logged In</p>
+								@endauth
 							</div>
 						</a>
 						
@@ -385,7 +390,7 @@
     <!--start switcher-->
 
     <!--end switcher-->
-    {{-- @include('sweetalert::alert') --}}
+    @include('sweetalert::alert')
 
     @yield('script')
 
