@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('memberships', function (Blueprint $table) {
+        Schema::create('list_foreach_time_visits', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kategori_membership_id');
-            $table->string('user_id');
-            $table->date('tanggal_mulai');
-            $table->date('tanggal_selesai');
-            $table->integer('total_bayar');
-            $table->string('jenis_pembayaran');
+            $table->string('nama_list');
+            $table->string('durasi');
+            $table->integer('harga_list');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('memberships');
+        Schema::dropIfExists('list_foreach_time_visits');
     }
 };

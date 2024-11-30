@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kategori_memberships', function (Blueprint $table) {
+        Schema::create('list_membership_gyms', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kategori');
-            $table->string('deskripsi')->nullable();
-            $table->integer('harga');
-            $table->string('periode');
+            $table->string('nama_list');
+            $table->integer('harga_list');
+            $table->string('durasi');
+            $table->json('fasilitas');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kategori_memberships');
+        Schema::dropIfExists('list_membership_gyms');
     }
 };

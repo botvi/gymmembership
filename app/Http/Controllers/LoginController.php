@@ -40,7 +40,7 @@ class LoginController extends Controller
                 return redirect()->route('admin.dashboard');
             } elseif ($user->role == 'user') {
                 Alert::success('Login Successful', 'Welcome back, Guys!');
-                return redirect()->route('user.dashboard'); // Define this route in your routes file
+                return redirect()->route('web.home'); // Define this route in your routes file
             } else {
                 // Handle other roles or unauthorized access
                 Auth::logout();
