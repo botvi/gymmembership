@@ -50,8 +50,8 @@
                                     <input type="text" class="form-control" id="durasi" name="durasi" value="{{ $package->durasi }}" required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="sesi" class="form-label">X Sesi</label>
-                                    <input type="text" class="form-control" id="sesi" name="sesi" value="{{ $package->sesi }}" required>
+                                    <label for="sesi" class="form-label">Sesi X</label>
+                                    <input type="number" class="form-control" id="sesi" name="sesi" value="{{ $package->sesi }}" required>
                                 </div>
 
                                 <div id="opsiContainer">

@@ -31,7 +31,7 @@
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
                                     <th>Durasi</th>
-                                    <th>Sisa Hari</th>
+                                    <th>Total Hari</th>
                                     <th>Total Bayar</th>
                                     <th>Status Pembayaran</th>
                                     <th>Status Membership</th>
@@ -62,7 +62,7 @@
                                                 $endDate = \Carbon\Carbon::parse($p->tanggal_selesai);
                                                 $remainingDays = $today->diffInDays($endDate, false);
                                             @endphp
-                                            {{ $remainingDays >= 1 ? $remainingDays . ' Hari' : 'Expired' }}
+                                            {{ $remainingDays >= 1 ? $remainingDays . ' Hari' : 'Tidak Aktif' }}
                                         </td>
                                         <td>Rp {{ number_format($p->total_bayar, 0, ',', '.') }}</td>
                                         <td>
@@ -100,7 +100,7 @@
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
                                     <th>Durasi</th>
-                                    <th>Sisa Hari</th>
+                                    <th>Total Hari</th>
                                     <th>Total Bayar</th>
                                     <th>Status Pembayaran</th>
                                     <th>Status Membership</th>

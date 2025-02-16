@@ -26,7 +26,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>X Sesi</th>
+                                    <th>Sesi X</th>
                                     <th>Harga</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
@@ -37,7 +37,7 @@
                                 @foreach ($membership as $index => $p)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>X {{ $p->sesi }}</td>
+                                        <td>{{ $p->sesi }} X</td>
                                         <td>Rp. {{ number_format($p->harga_list, 0, ',', '.') }}</td>
                                         <td>{{ $p->deskripsi }}</td>
                                         <td>
@@ -56,7 +56,7 @@
                             <tfoot>
                                 <tr>
                                     <th>No</th>
-                                    <th>X Sesi</th>
+                                    <th>Sesi X</th>
                                     <th>Harga</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>

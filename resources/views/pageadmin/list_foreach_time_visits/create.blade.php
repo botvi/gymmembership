@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="durasi" class="form-label">Durasi (Hari)</label>
-                                    <input type="text" class="form-control" id="durasi" name="durasi" required>
+                                    <input type="number" class="form-control" id="durasi" value="1" name="durasi" required readonly>
                                 </div>
                                 <div class="col-12">
                                     <label for="harga_list" class="form-label">Harga</label>
